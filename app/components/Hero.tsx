@@ -1,30 +1,26 @@
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-      {/* Subtle "Gloss" badge */}
-      <div className="mb-6 px-4 py-1 rounded-full glass-panel text-xs font-medium tracking-[0.2em] text-pastel-blue/80 uppercase">
-        Available for freelance
-      </div>
+    <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-24 overflow-hidden">
+      {/* Background Mesh for depth */}
+      <div className="absolute inset-0 bg-mesh pointer-events-none" />
 
-      <h1 className="text-7xl md:text-9xl font-bold tracking-tighter italic">
-        <span className="text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-          Creative
-        </span>
-        <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-b from-zinc-200 to-zinc-800">
-          Developer
+      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-center">
+        <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-white via-pastel-purple via-pastel-blue to-white bg-[length:200%_auto] animate-shine">
+          Build the Future.
         </span>
       </h1>
-
-      <p className="mt-8 text-zinc-500 max-w-lg text-lg font-light leading-relaxed">
-        Merging technical precision with high-end aesthetic design.
+      
+      <p className="mt-6 text-zinc-400 max-w-lg text-center text-lg md:text-xl font-light">
+        Developing high-performance interfaces with a minimalist aesthetic.
       </p>
 
-      <div className="mt-12 flex gap-4">
-        <button className="px-8 py-3 rounded-xl glass-panel text-white hover:bg-white/10 transition-all cursor-pointer">
-          My Work
+      <div className="relative group mt-12">
+        {/* Glow effect behind button */}
+        <div className="absolute -inset-1 bg-gradient-to-r from-pastel-purple to-pastel-blue rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+        <button className="relative px-8 py-3 rounded-full bg-black border border-white/10 text-white hover:border-white/20 transition-all cursor-pointer">
+          Explore Projects
         </button>
       </div>
     </section>
   );
-}   
+}
