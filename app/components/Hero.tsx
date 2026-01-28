@@ -17,8 +17,7 @@ export default function Hero() {
       <div className="relative group mt-12">
         {/* Glow effect behind button */}
         <div className="absolute -inset-1 bg-gradient-to-r from-pastel-purple to-pastel-blue rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-        <button className="relative px-8 py-3 rounded-full bg-black border border-white/10 text-white hover:border-white/20 transition-all cursor-pointer">
-          Explore Projects
+        <button className="relative px-8 py-3 rounded-full glass border-white/20 text-white transition-all cursor-pointer">          Explore Projects
         </button>
       </div>
     </section>
