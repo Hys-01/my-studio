@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-black: oklch(0.12 0 0);
-  
-  /* Restoring your favorite Pastel Accents */
   --color-pastel-purple: oklch(0.85 0.1 280);
   --color-pastel-blue: oklch(0.85 0.08 220);
   --color-pastel-pink: oklch(0.85 0.1 340);
@@ -16,26 +13,23 @@
 }
 
 :root {
-  background-color: var(--color-brand-black);
+  background-color: black;
   color: white;
   color-scheme: dark;
 }
 
-/* Gradient Glassmorphism Utility */
-.glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+/* Gradient Glassmorphism (Applied to your existing class) */
+.glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  /* The gradient border trick */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); 
 }
 
-/* The "Glow" behind the site */
+/* Your Background Mesh */
 .bg-mesh {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -1;
   background-image: 
-    radial-gradient(circle at 20% 20%, rgba(167, 139, 250, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(147, 197, 253, 0.05) 0%, transparent 40%);
+    radial-gradient(circle at 15% 15%, rgba(167, 139, 250, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(147, 197, 253, 0.08) 0%, transparent 40%);
 }
