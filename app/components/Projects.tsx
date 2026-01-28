@@ -5,11 +5,18 @@ interface ProjectProps {
 }
 
 function ProjectCard({ title, description, accentColor }: ProjectProps) {
-  // Mapping colors to vibrant glows
+  // Mapping colors to vibrant glows (Untouched)
   const glows = {
     purple: "group-hover:shadow-[0_0_30px_-5px_rgba(195,165,255,0.3)] border-pastel-purple/20",
     blue: "group-hover:shadow-[0_0_30px_-5px_rgba(165,216,255,0.3)] border-pastel-blue/20",
     pink: "group-hover:shadow-[0_0_30px_-5px_rgba(255,180,225,0.3)] border-pastel-pink/20",
+  };
+
+  // Fixed the background line mapping for Tailwind v4
+  const lineColors = {
+    purple: "bg-pastel-purple",
+    blue: "bg-pastel-blue",
+    pink: "bg-pastel-pink",
   };
 
   return (
@@ -23,8 +30,8 @@ function ProjectCard({ title, description, accentColor }: ProjectProps) {
           {description}
         </p>
         
-        {/* The thin pastel indicator line */}
-        <div className={`mt-6 h-[1px] w-12 bg-pastel-${accentColor} opacity-50 group-hover:w-full transition-all duration-700`} />
+        {/* The thin pastel indicator line (Now correctly mapped) */}
+        <div className={`mt-6 h-[1px] w-12 ${lineColors[accentColor]} opacity-50 group-hover:w-full transition-all duration-700`} />
       </div>
     </div>
   );
