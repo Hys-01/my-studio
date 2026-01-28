@@ -5,10 +5,11 @@ interface ProjectProps {
 }
 
 function ProjectCard({ title, description, accentColor }: ProjectProps) {
+  // Stronger accent border for visibility
   const glows = {
-    purple: "group-hover:shadow-[0_0_40px_-10px_rgba(195,165,255,0.4)] border-pastel-purple/30",
-    blue: "group-hover:shadow-[0_0_40px_-10px_rgba(165,216,255,0.4)] border-pastel-blue/30",
-    pink: "group-hover:shadow-[0_0_40px_-10px_rgba(255,180,225,0.4)] border-pastel-pink/30",
+    purple: "group-hover:shadow-[0_0_50px_-10px_rgba(195,165,255,0.6)] border-pastel-purple/50",
+    blue: "group-hover:shadow-[0_0_50px_-10px_rgba(165,216,255,0.6)] border-pastel-blue/50",
+    pink: "group-hover:shadow-[0_0_50px_-10px_rgba(255,180,225,0.6)] border-pastel-pink/50",
   };
 
   const lineColors = {
@@ -18,18 +19,18 @@ function ProjectCard({ title, description, accentColor }: ProjectProps) {
   };
 
   return (
-    <div className={`group relative rounded-2xl glass p-8 transition-all duration-500 hover:-translate-y-2 ${glows[accentColor]}`}>
-      {/* Glossy sheen reflection overlay */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-white/[0.1] via-transparent to-transparent pointer-events-none rounded-2xl" />
+    <div className={`group relative rounded-3xl glass p-10 transition-all duration-500 hover:-translate-y-4 ${glows[accentColor]}`}>
+      {/* High-visibility gloss reflection */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-white/[0.2] via-transparent to-transparent pointer-events-none rounded-3xl" />
       
       <div className="relative z-10">
-        <h3 className="text-2xl font-medium text-white tracking-tight">{title}</h3>
-        <p className="mt-3 text-zinc-400 text-sm leading-relaxed font-light">
+        <h3 className="text-3xl font-bold text-white tracking-tight">{title}</h3>
+        <p className="mt-4 text-white/60 text-base leading-relaxed font-light">
           {description}
         </p>
         
-        {/* Your extending line logic */}
-        <div className={`mt-6 h-[1px] w-12 ${lineColors[accentColor]} opacity-60 group-hover:w-full transition-all duration-700`} />
+        {/* Your extending line (Now higher opacity) */}
+        <div className={`mt-8 h-[2px] w-12 ${lineColors[accentColor]} opacity-80 group-hover:w-full transition-all duration-700 shadow-[0_0_15px_rgba(255,255,255,0.5)]`} />
       </div>
     </div>
   );
@@ -43,13 +44,16 @@ export default function Projects() {
   ];
 
   return (
-    <section className="relative max-w-6xl mx-auto px-6 py-32 overflow-visible">
-      <div className="flex flex-col items-center mb-16">
-        <h2 className="text-xs uppercase tracking-[0.5em] text-pastel-blue font-semibold mb-4">Portfolio</h2>
-        <div className="h-px w-12 bg-gradient-to-r from-transparent via-pastel-blue to-transparent" />
+    <section className="relative max-w-7xl mx-auto px-6 py-40 overflow-visible">
+      {/* PROJECT AREA MESH (Solves the "Pure Black" problem) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-mesh-strong opacity-40 pointer-events-none z-0" />
+
+      <div className="relative z-10 flex flex-col items-center mb-24">
+        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-blue font-bold mb-6">Portfolio</h2>
+        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-blue to-transparent" />
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
         {myProjects.map((p, i) => (
           <ProjectCard key={i} title={p.title} description={p.description} accentColor={p.color} />
         ))}
