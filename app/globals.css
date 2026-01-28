@@ -1,80 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  body {
-    @apply bg-deep-black text-white;
+@theme {
+  /* Deep Modern Black */
+  --color-brand-black: oklch(0.12 0 0);
+  
+  /* Pastel Accents */
+  --color-pastel-purple: oklch(0.85 0.1 280);
+  --color-pastel-blue: oklch(0.85 0.08 220);
+  --color-pastel-pink: oklch(0.85 0.1 340);
+
+  /* Gloss/Shine Animation */
+  --animate-shine: shine 3s ease-in-out infinite;
+
+  @keyframes shine {
+    from { background-position: -200% 0; }
+    to { background-position: 200% 0; }
   }
 }
 
-@layer components {
-  /* Glassmorphism card style */
-  .glass-card {
-    @apply bg-glass-white backdrop-blur-glass border border-glass-border rounded-2xl shadow-glass;
-  }
-  
-  /* Hover glow effect */
-  .glow-hover {
-    @apply transition-all duration-300 ease-in-out;
-  }
-  
-  .glow-hover:hover {
-    @apply shadow-glass transform scale-[1.02];
-  }
-  
-  /* Pastel gradient text */
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink;
-  }
-  
-  /* Subtle shine effect */
-  .shine {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .shine::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    );
-    transition: left 0.5s;
-  }
-  
-  .shine:hover::before {
-    left: 100%;
-  }
+:root {
+  background-color: var(--color-brand-black);
+  color: white;
+  color-scheme: dark;
 }
 
-@layer utilities {
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    @apply bg-rich-black;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    @apply bg-charcoal rounded-full;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-pastel-blue;
-  }
+/* Global Glassmorphism Base */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
