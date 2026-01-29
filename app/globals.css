@@ -10,6 +10,14 @@
     from { background-position: -200% 0; }
     to { background-position: 200% 0; }
   }
+
+
+  /* extra energy*/
+  --animate-drift: drift 20s infinite alternate;
+  @keyframes drift {
+    from { transform: rotate(0deg) scale(1); }
+    to { transform: rotate(10deg) scale(1.2); }
+  }
 }
 
 :root {
@@ -50,4 +58,6 @@
     radial-gradient(circle at 90% 80%, rgba(147, 197, 253, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(255, 180, 225, 0.15) 0%, transparent 60%);
   filter: blur(80px);
+
+  animation: var(--animate-drift);
 }
