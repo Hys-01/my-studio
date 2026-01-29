@@ -50,7 +50,7 @@ export default function Projects() {
 
       <div className="relative z-10 flex flex-col items-center mb-24">
         <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-orange font-bold mb-6">Portfolio</h2>
-        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-pink to-transparent" />
+        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-orange to-transparent" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
