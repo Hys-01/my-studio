@@ -11,7 +11,7 @@ export default function Hero() {
       </h1>
       
       <p className="relative z-10 mt-8 text-white/70 max-w-xl text-center text-xl md:text-2xl font-light">
-        _ <span className="text-white font-medium">Follow Me </span>
+        WORK IN PROGRESS\n <span className="text-white font-medium">Follow Me </span>
       </p>
 
       <div className="relative group mt-14 z-10">
