@@ -49,8 +49,8 @@ export default function Projects() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-mesh-strong opacity-40 pointer-events-none z-0" />
 
       <div className="relative z-10 flex flex-col items-center mb-24">
-        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-orange font-bold mb-6">Portfolio</h2>
-        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-orange to-transparent" />
+        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-sky font-bold mb-6">Portfolio</h2>
+        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-sky to-transparent" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">

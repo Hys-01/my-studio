@@ -40,9 +40,9 @@ export default function Socials() {
 
   return (
     <section className="relative max-w-6xl mx-auto px-6 py-20">
-      <div className="flex flex-col items-center mb-12">
-        <h2 className="text-xs uppercase tracking-[0.5em] text-white/30 font-bold mb-4">Connect</h2>
-        <div className="h-px w-24 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      <div className="relative z-10 flex flex-col items-center mb-24">
+        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-sky font-bold mb-6">Portfolio</h2>
+        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-sky to-transparent" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
