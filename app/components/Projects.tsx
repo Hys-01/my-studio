@@ -38,9 +38,9 @@ function ProjectCard({ title, description, accentColor }: ProjectProps) {
 
 export default function Projects() {
   const myProjects: { title: string; description: string; color: "red" | "pink" | "aqua" }[] = [
-    { title: "Lumina UI", description: "A high-fidelity design system built for modern startups.", color: "red" },
-    { title: "Velocity", description: "Real-time analytics engine with glassmorphism dashboards.", color: "pink" },
-    { title: "Aura", description: "Experimental ambient background generator for creative focus.", color: "aqua" },
+    { title: "YouTube", description: ".", color: "red" },
+    { title: "Instagram", description: ".", color: "pink" },
+    { title: "TikTok", description: ".", color: "aqua" },
   ];
 
   return (
@@ -49,7 +49,7 @@ export default function Projects() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-mesh-strong opacity-40 pointer-events-none z-0" />
 
       <div className="relative z-10 flex flex-col items-center mb-24">
-        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-sky font-bold mb-6">Portfolio</h2>
+        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-sky font-bold mb-6">Channels</h2>
         <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-sky to-transparent" />
       </div>
       
