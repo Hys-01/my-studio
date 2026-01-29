@@ -6,12 +6,12 @@ export default function Hero() {
 
       <h1 className="relative z-10 text-6xl md:text-9xl font-extrabold tracking-tighter text-center">
         <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-white via-pastel-purple via-pastel-blue to-white bg-[length:200%_auto] animate-shine">
-          Build the Future.
+          My Links
         </span>
       </h1>
       
       <p className="relative z-10 mt-8 text-white/70 max-w-xl text-center text-xl md:text-2xl font-light">
-        Developing high-performance interfaces with a <span className="text-white font-medium">minimalist aesthetic.</span>
+        _ <span className="text-white font-medium">Follow Me </span>
       </p>
 
       <div className="relative group mt-14 z-10">

@@ -1,21 +1,21 @@
 interface ProjectProps {
   title: string;
   description: string;
-  accentColor: "purple" | "blue" | "pink";
+  accentColor: "red" | "pink" | "aqua";
 }
 
 function ProjectCard({ title, description, accentColor }: ProjectProps) {
   // Stronger accent border for visibility
   const glows = {
-    purple: "group-hover:shadow-[0_0_50px_-10px_rgba(195,165,255,0.6)] border-pastel-purple/50",
-    blue: "group-hover:shadow-[0_0_50px_-10px_rgba(165,216,255,0.6)] border-pastel-blue/50",
-    pink: "group-hover:shadow-[0_0_50px_-10px_rgba(255,180,225,0.6)] border-pastel-pink/50",
+    red: "group-hover:shadow-[0_0_50px_-10px_rgba(195,165,255,0.6)] border-pastel-red/50",
+    pink: "group-hover:shadow-[0_0_50px_-10px_rgba(165,216,255,0.6)] border-pastel-pink/50",
+    aqua: "group-hover:shadow-[0_0_50px_-10px_rgba(255,180,225,0.6)] border-pastel-aqua/50",
   };
 
   const lineColors = {
-    purple: "bg-pastel-purple",
-    blue: "bg-pastel-blue",
+    red: "bg-pastel-red",
     pink: "bg-pastel-pink",
+    aqua: "bg-pastel-aqua",
   };
 
   return (
@@ -37,10 +37,10 @@ function ProjectCard({ title, description, accentColor }: ProjectProps) {
 }
 
 export default function Projects() {
-  const myProjects: { title: string; description: string; color: "purple" | "blue" | "pink" }[] = [
-    { title: "Lumina UI", description: "A high-fidelity design system built for modern startups.", color: "purple" },
-    { title: "Velocity", description: "Real-time analytics engine with glassmorphism dashboards.", color: "blue" },
-    { title: "Aura", description: "Experimental ambient background generator for creative focus.", color: "pink" },
+  const myProjects: { title: string; description: string; color: "red" | "pink" | "aqua" }[] = [
+    { title: "Lumina UI", description: "A high-fidelity design system built for modern startups.", color: "red" },
+    { title: "Velocity", description: "Real-time analytics engine with glassmorphism dashboards.", color: "pink" },
+    { title: "Aura", description: "Experimental ambient background generator for creative focus.", color: "aqua" },
   ];
 
   return (
@@ -49,8 +49,8 @@ export default function Projects() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[120%] bg-mesh-strong opacity-40 pointer-events-none z-0" />
 
       <div className="relative z-10 flex flex-col items-center mb-24">
-        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-blue font-bold mb-6">Portfolio</h2>
-        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-blue to-transparent" />
+        <h2 className="text-sm uppercase tracking-[0.8em] text-pastel-pink font-bold mb-6">Portfolio</h2>
+        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-pastel-pink to-transparent" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
