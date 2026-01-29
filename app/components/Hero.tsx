@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="relative group mt-14 z-10">
         <div className="absolute -inset-2 bg-gradient-to-r from-pastel-purple to-pastel-blue rounded-full blur-xl opacity-40 group-hover:opacity-100 transition duration-700"></div>
         <button className="relative px-10 py-4 rounded-full glass border-white/40 text-white text-lg font-semibold transition-all cursor-pointer hover:scale-105 active:scale-95">
-          Explore Projects
+          Mystery Button
         </button>
       </div>
     </section>
