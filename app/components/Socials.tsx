@@ -1,7 +1,7 @@
 interface SocialProps {
   platform: string;
   handle: string;
-  color: "red" | "blurple" | "cyan";
+  color: "red" | "blurple" | "cyan" | "pink" | "aqua";
   link: string;
 }
 
@@ -10,12 +10,16 @@ function SocialCard({ platform, handle, color }: SocialProps) {
     red: "group-hover:shadow-[0_0_50px_-10px_rgba(255,100,100,0.4)] border-red-500/30",
     blurple: "group-hover:shadow-[0_0_50px_-10px_rgba(88,101,242,0.4)] border-[#5865F2]/30",
     cyan: "group-hover:shadow-[0_0_50px_-10px_rgba(0,255,255,0.4)] border-cyan-400/30",
+    pink: "group-hover:shadow-[0_0_50px_-10px_rgba(255,100,255,0.4)] border-pink-400/30",
+    aqua: "group-hover:shadow-[0_0_50px_-10px_rgba(100,255,255,0.4)] border-aqua-400/30",
   };
 
   const lineColors = {
-    red: "bg-red-500",
     blurple: "bg-[#5865F2]",
     cyan: "bg-cyan-400",
+    red: "bg-pastel-red",
+    pink: "bg-pastel-pink",
+    aqua: "bg-pastel-aqua",
   };
 
   return (
@@ -33,9 +37,9 @@ function SocialCard({ platform, handle, color }: SocialProps) {
 
 export default function Socials() {
   const socialList: SocialProps[] = [
-    { platform: "YouTube", handle: "@YourChannel", color: "red", link: "#" },
-    { platform: "Discord", handle: "Community Server", color: "blurple", link: "#" },
-    { platform: "Twitter / X", handle: "@YourTag", color: "cyan", link: "#" },
+    { platform: "Instagram Alt", handle: "@---", color: "pink", link: "#" },
+    { platform: "Discord", handle: "hys01", color: "blurple", link: "#" },
+    { platform: "---", handle: "@---", color: "cyan", link: "#" },
   ];
 
   return (
