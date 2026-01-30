@@ -5,7 +5,7 @@ export default function Header() {
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-6 pointer-events-none">
       {/* Your Gaming Tag / Logo */}
       <div className="text-white font-bold tracking-tighter text-xl pointer-events-auto">
-        Anon
+        Anonymous HYS Profile
       </div>
 
       {/* The "Forbidden" Button */}
