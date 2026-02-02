@@ -38,7 +38,7 @@ function ProjectCard({ title, description, accentColor }: ProjectProps) {
 
 export default function Projects() {
   const myProjects: { title: string; description: string; color: "red" | "pink" | "aqua" }[] = [
-    { title: "YouTube", description: ".", color: "red" },
+    { title: "YouTube", description: "XXX TAKEN DOWN :(", color: "red" },
     { title: "Instagram", description: ".", color: "pink" },
     { title: "TikTok", description: ".", color: "aqua" },
   ];
