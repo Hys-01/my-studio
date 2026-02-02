@@ -48,19 +48,19 @@ export default function Socials() {
   const socialList: SocialProps[] = [
     { 
         platform: "Steam", 
-        handle: "hys01", 
+        handle: "@I M X ★", 
         color: "cyan", 
         link: "https://steamcommunity.com/profiles/76561198398937916" 
     },
     { 
         platform: "Roblox", 
-        handle: "hys01", 
+        handle: "@Bubbly_Budgie (IsoAlgorithm)", 
         color: "red", 
         link: "https://www.roblox.com/users/236371601/profile" 
     },
     { 
         platform: "Discord", 
-        handle: "hys01", 
+        handle: "@hys01", 
         color: "blurple", 
         link: "https://discord.com/users/590678030356185095" // Update this!
     },
